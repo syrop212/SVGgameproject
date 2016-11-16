@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="SVGgame.css">
+
+  </head>
+  <body>
+    <!-- page content -->
+    <svg width="90%" viewBox="0 0 800 400" style="background: lightblue;">
+      <image id="yveltal" x=" 700" y="280" width="80" height="80" xlink:href="http://vignette2.wikia.nocookie.net/pokemon/images/a/ae/Yveltal_Shiny_XY.gif/revision/latest?cb=20140707225121"/>
+      <image  x="100" y="200" width="20" height="20" xlink:href="http://piq.codeus.net/static/media/userpics/piq_244107_400x400.png">
+        <animate id="rare" attributeName="x" from="100" to="700" dur="10s" begin="0s; candy.end"/>
+        <animate id="candy" attributeName="x" from="700" to="100" dur="10s" begin="rare.end"/>
+      </image>
+      <image  x="600" y="100" width="20" height="20" xlink:href="http://piq.codeus.net/static/media/userpics/piq_244107_400x400.png">
+        <animate id="rarecandy" attributeName="y" from="100" to="300" dur="10s" begin="0s; candyrare.end"/>
+        <animate id="candyrare" attributeName="y" from="300" to="100" dur="10s" begin="rarecandy.end"/>
+      </image>
+    </svg>
+  </body>
+  <script src="SVGgame.js"></script>
+</html>
