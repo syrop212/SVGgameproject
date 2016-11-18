@@ -7,13 +7,13 @@
   </head>
   <body>
     <!-- page content -->
-    <svg id="svgGame" width="90%" viewBox="0 0 800 400" style="background: lightblue;">
+    <svg id="playerArea" width="90%" viewBox="0 0 800 400" style="background: lightblue;">
       <image id="yveltal" x=" 700" y="280" width="80" height="80" xlink:href="http://vignette2.wikia.nocookie.net/pokemon/images/a/ae/Yveltal_Shiny_XY.gif/revision/latest?cb=20140707225121"/>
-      <image id="rcandy" x="100" y="200" width="30" height="30" opacity="1" xlink:href="http://piq.codeus.net/static/media/userpics/piq_244107_400x400.png">
+      <image id="rcandy" x="100" y="200" width="85" height="85" opacity="1" xlink:href="http://piq.codeus.net/static/media/userpics/piq_244107_400x400.png">
         <animate id="rare" attributeName="x" from="100" to="700" dur="10s" begin="0s; candy.end"/>
         <animate id="candy" attributeName="x" from="700" to="100" dur="10s" begin="rare.end"/>
       </image>
-      <image id="rcaandy" x="600" y="100" width="30" height="30" opacity="1" xlink:href="http://piq.codeus.net/static/media/userpics/piq_244107_400x400.png">
+      <image id="red" x="600" y="100" width="85" height="85" opacity="1" xlink:href="http://piq.codeus.net/static/media/userpics/piq_244107_400x400.png">
         <animate id="rarecandy" attributeName="y" from="100" to="300" dur="10s" begin="0s; candyrare.end"/>
         <animate id="candyrare" attributeName="y" from="300" to="100" dur="10s" begin="rarecandy.end"/>
       </image>
