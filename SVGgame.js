@@ -1,3 +1,9 @@
+// randomNumber returns a random number between min and max
+function randomNumber(min,max)
+{
+ return Math.floor(Math.random()*(max-min+1)+min);
+}
+
 // Overlap
   var canvas1 = document.getElementById("playerArea");
   var width = 85;
@@ -6,7 +12,7 @@
   var playerY;
   var foodX;
   var foodY;
-  // player 
+  // player
   var yveltalposX = 700;
   var yveltalposY = 300;
 
