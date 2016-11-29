@@ -52,6 +52,7 @@ if(playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < fo
   //rarecandy.setAttribute("opacity", 0);
     rarecandy.setAttribute("x", xValue);
     rarecandy.setAttribute("y", yValue);
+    console.log("done");
   }
 
 else {
