@@ -1,4 +1,5 @@
 // randomNumber returns a random number between min and max
+
 function randomNumber(min,max)
 {
  return Math.floor(Math.random()*(max-min+1)+min);
@@ -15,7 +16,9 @@ function randomNumber(min,max)
   // player
   var yveltalposX = 700;
   var yveltalposY = 300;
-
+  // random
+  var xValue = randomNumber(0, 800);
+  var yValue = randomNumber(0, 400);
 
 document.addEventListener("keydown", function(e) {
 if(e.keyCode == 37 || e.keyCode == 65){
@@ -46,12 +49,14 @@ foodX = Number(rarecandy.getAttribute("x"));
 foodY = Number(rarecandy.getAttribute("y"));
 
 if(playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
-  rarecandy.setAttribute("opacity", 0);
+  //rarecandy.setAttribute("opacity", 0);
+    rarecandy.setAttribute("x", xValue);
+    rarecandy.setAttribute("y", yValue);
+  }
 
-}
 else {
-  rarecandy.setAttribute("opacity", 1);
-}
+    rarecandy.setAttribute("opacity", 1);
+  }
 
 
   })
