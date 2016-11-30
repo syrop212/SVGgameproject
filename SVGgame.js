@@ -16,9 +16,7 @@ function randomNumber(min,max)
   // player
   var yveltalposX = 700;
   var yveltalposY = 300;
-  // random
-  var xValue = randomNumber(0, 800);
-  var yValue = randomNumber(0, 400);
+
 
 document.addEventListener("keydown", function(e) {
 if(e.keyCode == 37 || e.keyCode == 65){
@@ -49,8 +47,11 @@ foodX = Number(rarecandy.getAttribute("x"));
 foodY = Number(rarecandy.getAttribute("y"));
 
 if(playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
-  //rarecandy.setAttribute("opacity", 0);
-    rarecandy.setAttribute("x", xValue);
+  //random
+  var xValue = randomNumber(0, 800);
+  var yValue = randomNumber(0, 400);
+
+    rarecandy.setAttribute("x", xValue);  
     rarecandy.setAttribute("y", yValue);
     console.log("done");
   }
