@@ -16,7 +16,8 @@ function randomNumber(min,max)
   // player
   var yveltalposX = 700;
   var yveltalposY = 300;
-
+  //score
+  var foodEaten = 0;
 
 document.addEventListener("keydown", function(e) {
 if(e.keyCode == 37 || e.keyCode == 65){
@@ -51,13 +52,20 @@ if(playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < fo
   var xValue = randomNumber(0, 800);
   var yValue = randomNumber(0, 400);
 
-    rarecandy.setAttribute("x", xValue);  
+    rarecandy.setAttribute("x", xValue);
     rarecandy.setAttribute("y", yValue);
+    foodEaten = foodEaten + 1;
+    document.getElementById("score").textContent = foodEaten;
     console.log("done");
   }
 
 else {
     rarecandy.setAttribute("opacity", 1);
+  }
+
+
+  if(foodEaten == 5) {
+    document.getElementById("playerArea").pauseAnimations();
   }
 
 
