@@ -41,11 +41,14 @@ var yveltal = document.getElementById("yveltal");
 var rarecandy = document.getElementById("rcandy");
 
 
+
 playerX = Number(yveltal.getAttribute("x"));
 playerY = Number(yveltal.getAttribute("y"));
 
 foodX = Number(rarecandy.getAttribute("x"));
 foodY = Number(rarecandy.getAttribute("y"));
+
+
 
 if(playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < foodY + height) {
   //random
@@ -54,6 +57,7 @@ if(playerX > foodX && playerX < foodX + width && playerY > foodY && playerY < fo
 
     rarecandy.setAttribute("x", xValue);
     rarecandy.setAttribute("y", yValue);
+
     foodEaten = foodEaten + 1;
     document.getElementById("score").textContent = foodEaten;
     console.log("eaten");
